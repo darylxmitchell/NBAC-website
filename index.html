@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="New Bern (NC) Alumni Chapter of Kappa Alpha Psi Fraternity, Inc.">
+<title>New Bern (NC) Alumni Chapter | Kappa Alpha Psi</title>
+<style>
+:root {
+  --crimson: #70110C;
+  --cream: #F2EBD7;
+  --gold: #D6A323;
+  --gold-light: #F4D77A;
+  --ink: #35100D;
+  --paper: #fffaf0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--ink); background: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+}
+a { color: inherit; }
+.site-header {
+  min-height: 104px; padding: 16px clamp(20px, 4vw, 72px);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 26px; color: var(--cream);
+  background: linear-gradient(110deg, #7e100b, var(--crimson) 65%, #4d0906);
+  border-bottom: 2px solid rgba(242,235,215,.8);
+}
+.brand {
+  color: var(--cream); text-decoration: none; font-size: clamp(42px, 5vw, 70px);
+  line-height: 1; font-weight: 700; letter-spacing: -4px; white-space: nowrap;
+}
+.nav-toggle {
+  display: none; border: 1px solid rgba(242,235,215,.55); color: var(--cream);
+  background: transparent; border-radius: 5px; padding: 10px 13px;
+  font: 700 14px Arial, sans-serif;
+}
+nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(16px, 3.1vw, 54px); }
+nav a {
+  color: var(--cream); text-decoration: none; text-transform: uppercase;
+  font: 700 clamp(12px, 1.25vw, 18px)/1.2 Arial, sans-serif;
+  padding: 12px 0 9px; border-bottom: 4px solid transparent;
+}
+nav a:hover, nav a:focus-visible, nav a.active { border-bottom-color: var(--gold); }
+.hero {
+  min-height: min(690px, calc(100vh - 104px));
+  padding: 34px clamp(22px, 3vw, 54px) 112px;
+  display: grid; grid-template-columns: minmax(280px, 34%) 1fr;
+  align-items: center; gap: clamp(28px, 3vw, 56px);
+  position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 25% 42%, rgba(255,255,255,.72), transparent 52%),
+              linear-gradient(110deg, #f8f0df, var(--cream) 55%, #f8efdc);
+}
+.seal-wrap { display:flex; justify-content:center; align-items:center; position:relative; z-index:1; }
+.seal { width:min(100%, 520px); height:auto; display:block; filter:drop-shadow(0 9px 8px rgba(58,20,8,.15)); }
+.hero-copy { border-left:3px solid var(--gold); padding:0 0 0 clamp(28px, 3vw, 56px); position:relative; z-index:1; }
+h1 { margin:0; color:var(--crimson); font-size:clamp(32px, 5.4vw, 88px); line-height:.98; letter-spacing:-.025em; font-weight:700; white-space:nowrap; }
+.chapter-label { margin:20px 0 0 8px; color:var(--crimson); font-size:clamp(22px, 3.6vw, 58px); line-height:1.05; letter-spacing:.22em; font-weight:700; }
+.ornament { display:flex; align-items:center; gap:26px; margin:30px 0 0 12px; width:min(100%, 1000px); }
+.ornament::before, .ornament::after { content:""; height:5px; flex:1; background:linear-gradient(90deg, transparent, var(--gold), #a87500); }
+.ornament::after { background:linear-gradient(90deg, #a87500, var(--gold), transparent); }
+.diamond { width:32px; height:32px; border:6px solid var(--gold); transform:rotate(45deg); flex:0 0 auto; }
+.lower-swoosh { position:absolute; z-index:0; left:-3%; right:-3%; bottom:-4px; height:145px; background:var(--crimson); border-top:12px solid var(--gold); clip-path:polygon(0 30%,20% 0,43% 24%,68% 54%,84% 35%,100% 0,100% 100%,0 100%); }
+.content { max-width:1180px; margin:0 auto; padding:76px 26px; }
+.section-kicker { color:#9b7418; text-transform:uppercase; letter-spacing:.2em; font:700 13px Arial,sans-serif; }
+h2 { margin:10px 0 22px; color:var(--crimson); font-size:clamp(30px,4vw,48px); }
+.intro { max-width:760px; font:18px/1.7 Arial,sans-serif; color:#59413b; }
+.officer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:28px; }
+.officer {
+  display:flex; justify-content:space-between; gap:18px; padding:18px 20px;
+  background:rgba(255,255,255,.55); border:1px solid rgba(112,17,12,.12);
+  font:16px/1.4 Arial,sans-serif;
+}
+.officer strong { color:var(--crimson); }
+.gallery-placeholder {
+  min-height:190px; display:flex; align-items:center; justify-content:center;
+  padding:30px; text-align:center; background:rgba(255,255,255,.38);
+  border:2px dashed rgba(112,17,12,.35); color:#795c50;
+  font:700 16px/1.5 Arial,sans-serif; letter-spacing:.04em;
+}
+.site-footer { padding:28px 24px; text-align:center; color:var(--cream); background:var(--crimson); font:14px/1.6 Arial,sans-serif; }
+@media (max-width:900px) {
+  .site-header { flex-wrap:wrap; }
+  .nav-toggle { display:block; }
+  nav { display:none; width:100%; flex-wrap:wrap; justify-content:center; gap:8px 24px; padding:8px 0 4px; }
+  nav.open { display:flex; }
+  .hero { min-height:auto; grid-template-columns:1fr; gap:20px; padding:32px 22px 120px; }
+  .seal { width:min(68vw,390px); }
+  .hero-copy { border-left:0; border-top:3px solid var(--gold); padding:28px 0 0; text-align:center; }
+  h1 { font-size:clamp(27px,8.5vw,54px); }
+  .chapter-label { font-size:clamp(21px,5vw,36px); letter-spacing:.15em; }
+  .ornament { margin:26px auto 0; }
+  .lower-swoosh { height:90px; }
+}
+@media (max-width:560px) {
+  .officer-grid { grid-template-columns:1fr; }
+  .officer { flex-direction:column; gap:4px; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="Kappa Alpha Psi home">ΚΑΨ</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">MENU</button>
+  <nav id="main-nav" aria-label="Main navigation">
+    <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#programs">Programs</a>
+    <a href="#events">Events</a><a href="#news">News</a><a href="#officers">Officers</a><a href="#lineage">Lineage</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+<main id="home" class="hero">
+  <div class="seal-wrap"><img class="seal" src="assets/chapter-seal.png" alt="New Bern Alumni Chapter seal"></div>
+  <section class="hero-copy" aria-labelledby="page-title">
+    <h1 id="page-title">NEW BERN (NC)</h1>
+    <p class="chapter-label">ALUMNI CHAPTER</p>
+    <div class="ornament" aria-hidden="true"><span class="diamond"></span></div>
+  </section>
+  <div class="lower-swoosh" aria-hidden="true"></div>
+</main>
+<section id="about" class="content">
+  <div class="section-kicker">Welcome</div>
+  <h2>Achievement in New Bern</h2>
+  <p class="intro">Welcome to the New Bern (NC) Alumni Chapter of Kappa Alpha Psi Fraternity, Inc. We are committed to achievement, brotherhood, service, and making a positive difference in our community.</p>
+</section>
+<section id="programs" class="content">
+  <div class="section-kicker">Community impact</div><h2>Programs & Service</h2>
+  <p class="intro">Learn more about our chapter initiatives, youth development, community partnerships, and service throughout the New Bern area.</p>
+</section>
+<section id="events" class="content">
+  <div class="section-kicker">Stay connected</div><h2>Upcoming Events</h2>
+  <p class="intro">Chapter events and community activities will be featured here. Check back for the latest dates and details.</p>
+</section>
+<section id="officers" class="content">
+  <div class="section-kicker">Leadership</div><h2>Chapter Officers</h2>
+  <div class="officer-grid">
+    <div class="officer"><strong>Polemarch</strong><span>Jasper Robertson</span></div>
+    <div class="officer"><strong>Vice Polemarch</strong><span>Klonaris Ingram</span></div>
+    <div class="officer"><strong>Keeper of Records</strong><span>Daryl Mitchell</span></div>
+    <div class="officer"><strong>Keeper of Exchequer</strong><span>Arthur Hilliard</span></div>
+    <div class="officer"><strong>Strategus</strong><span>Myron Midgette</span></div>
+    <div class="officer"><strong>MTA Chairman</strong><span>Klonaris Ingram</span></div>
+  </div>
+</section>
+<section id="lineage" class="content"><div class="section-kicker">Our heritage</div><h2>Chapter Lineage</h2><p class="intro">Explore the chapter lineage and the brothers whose leadership and commitment have helped shape the New Bern (NC) Alumni Chapter. Chapter lineage details can be added here.</p></section>
+<section id="gallery" class="content"><div class="section-kicker">Chapter moments</div><h2>Gallery</h2><p class="intro">Photos from chapter events, community service, and brotherhood activities will be added here.</p><div class="gallery-placeholder">Gallery images coming soon</div></section>
+<section id="news" class="content"><div class="section-kicker">Chapter updates</div><h2>News</h2><p class="intro">Chapter announcements, highlights, and news will appear here.</p></section>
+<section id="contact" class="content"><div class="section-kicker">Get in touch</div><h2>Contact the Chapter</h2><p class="intro">For chapter information, community partnerships, or event inquiries, please contact the New Bern (NC) Alumni Chapter.</p></section>
+<footer class="site-footer">New Bern (NC) Alumni Chapter · Kappa Alpha Psi Fraternity, Inc. · Established 2014</footer>
+<script>
+const toggle=document.querySelector('.nav-toggle'), nav=document.querySelector('#main-nav');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+</script>
+</body></html>
